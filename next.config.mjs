@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Extra dev hosts (comma-separated), e.g. a preview proxy domain.
+  allowedDevOrigins: process.env.NEXT_ALLOWED_DEV_ORIGINS?.split(",") ?? [],
   typescript: {
     ignoreBuildErrors: true,
   },
